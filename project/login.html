@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasksssss</title>
+    <style>
+        #forms-container {
+            display:flex ;
+            justify-content: space-between;
+            
+        }
+        body {
+            width: 80%;
+            margin:auto;
+            background-color: rgb(82, 0, 0);
+        }
+        #container, #log-in {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        #log-in {
+            height: 400px;
+        }
+        .content {
+            margin: 25px;
+            font-size: 25px;
+        }
+        #btn, #btn-log {
+            height: 60px;
+            width: 150px;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+        .input-width {
+            width: 300px;
+            height: 30px;
+        }
+
+        .requierd{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="forms-container"> 
+        <form id="container">
+            <div class="content">
+                <label><span class="requierd">*</span> Enter your first name</label>
+                <br>
+                <input id="my-username" class="input-width" type="username" value="" onchange="setValueforName()">
+                <div id="username-warining" style="display: none; color:red; font-size: 15px;">Please don't use numbers or Char. And don't let it empty.</div>
+                <div id="username-accept" style="display: none; color:green; font-size: 15px;">Username is okay.</div>
+            </div>
+            
+            <div class="content">
+                <label><span class="requierd">*</span> Enter your last name</label>
+                <br>
+                <input id="my-username-last" class="input-width" type="username" value="" onchange="setValueforLastName()">
+                <div id="last-warining" style="display: none; color:red; font-size: 15px;">Please don't use numbers or Char. And don't let it empty.</div>
+                <div id="last-accept" style="display: none; color:green; font-size: 15px;">Username is okay.</div>
+            </div>
+
+
+            <div class="content">
+                <label><span class="requierd">*</span> Enter your email</label>
+                <br>
+                <input id="my-email" class="input-width" type="email" value="" onchange="setValueforEmail()">
+                <div id="email-warining" style="display: none; color:red; font-size: 15px;">Please use "@" and ".com" in your email.</div>
+                <div id="email-repeat" style="display: none; color:red; font-size: 15px;">Your email is repeated.Please use another one.</div>
+                <div id="email-accept" style="display: none; color:green; font-size: 15px;">Email is okay.</div>
+            </div>
+
+            <div class="content">
+                <label><span class="requierd">*</span> Reenter your email</label>
+                <br>
+                <input id="re-my-email" class="input-width" type="email" value="" onchange="setValueforReEmail()">
+                <div id="reemail-warining" style="display: none; color:red; font-size: 15px;">Your email does not match.</div>
+                <div id="reemail-accept" style="display: none; color:green; font-size: 15px;">Email is okay.</div>
+            </div>
+
+
+            <div class="content">
+                <label><span class="requierd">*</span> Enter your password</label>
+                <br>
+                <input id="my-password" class="input-width" type="password" value="" onchange="setValueforPassword()">
+                <div id="password-warining" style="display: none; color:red; font-size: 15px;">Please use capital and small letters, numbers and special Char in your password.</div>
+                <div id="password-accept" style="display: none; color:green; font-size: 15px;">Password is okay.</div>
+            </div>
+
+            <div class="content">
+                <label><span class="requierd">*</span> Reenter your password</label>
+                <br>
+                <input id="re-my-password" class="input-width" type="password" value="" onchange="setValueforRePassword()">
+                <div id="repassword-warining" style="display: none; color:red; font-size: 15px;">Your password does not match.</div>
+                <div id="repassword-accept" style="display: none; color:green; font-size: 15px;">Password is okay.</div>
+            </div>
+
+
+            <div class="content">
+                <label><span class="requierd">*</span> Enter your mobile number</label>
+                <br>
+                <input id="my-number" class="input-width" type="text" value="" onchange="setValueforNumber()">
+                <div id="number-warining" style="display: none; color:red; font-size: 15px;">Your number is too short or too tall.</div>
+                <div id="number-accept" style="display: none; color:green; font-size: 15px;">Your number is correct</div>
+            </div>
+            <br>
+            <button id="btn" action="#">Submit</button>
+        </form> -->
+
+        <form id="log-in" action="../Second_Project/index.html">
+            <div class="content">
+                <label>Email</label>
+                <br>
+                <input id="login-email" class="input-width" type="email" value="">
+                <div id="login-email-warining" style="display: none; color:red; font-size: 15px;">Your enter wrong email</div>
+                <div id="login-email-accept" style="display: none; color:green; font-size: 15px;">Your email is correct</div>
+            </div>
+            <div class="content">
+                <label>Password</label>
+                <br>
+                <input id="login-password" class="input-width" type="password" value="">
+                <div id="login-password-warining" style="display: none; color:red; font-size: 15px;">Your enter wrong password</div>
+                <div id="login-password-accept" style="display: none; color:green; font-size: 15px;">Your password is correct</div>
+            </div>
+            <br>
+            <button id="btn-log" action="#">Log In</button>
+        </form>
+    </div> 
+    <script src="login.js"></script>
+</body>
+</html>
