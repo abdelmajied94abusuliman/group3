@@ -209,7 +209,7 @@ formLogInEvent.onclick = function (event) {
                 let x = true;
                 console.log(x);
                 if ( x == true){
-                    window.location.href = "./profileCoach.html"
+                    window.location.href = "./profile.html"
                 }
                 
             }
