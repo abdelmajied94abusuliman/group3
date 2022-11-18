@@ -1,5 +1,6 @@
 var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-let arrayOfKeysAndValues = JSON.parse(sessionStorage.getItem('userInfo')) || [];
+let arrayOfKeysAndValues = JSON.parse(localStorage.getItem('userInfo')) || [];
+let currentUser = JSON.parse(localStorage.getItem("current-user"));
 let obj = {};
 
 
@@ -184,23 +185,16 @@ let obj = {};
 // }
 
 
+// localStorage.clear()
 
-
-
-
+let objectUser = {}
 
 let formLogInEvent = document.getElementById("btn-log")
 
 formLogInEvent.onclick = function (event) {
 
     let valueFromEmailLog = document.getElementById("login-email").value
-    console.log(valueFromEmailLog);
     let valueFromPasswordLog = document.getElementById("login-password").value
-    console.log(valueFromPasswordLog);
-
-    console.log(arrayOfKeysAndValues[0].email);
-    console.log(arrayOfKeysAndValues[0].password);
-
 
     for ( i=0 ; i<arrayOfKeysAndValues.length ; i++ ){
         if (valueFromEmailLog == arrayOfKeysAndValues[i].email){
@@ -210,10 +204,17 @@ formLogInEvent.onclick = function (event) {
             if (valueFromPasswordLog == arrayOfKeysAndValues[i].password) {
                 document.getElementById("login-password-accept").style.display = 'block'
                 document.getElementById("login-password-warining").style.display = 'none'
-                console.log(true);
-                break  
+                objectUser = arrayOfKeysAndValues[i];
+                localStorage.setItem('current-user', JSON.stringify(objectUser))
+                let x = true;
+                console.log(x);
+                if ( x == true){
+                    window.location.href = "./profileCoach.html"
+                }
+                
             }
             else {
+                document.getElementById("login-password-warining").style.display = 'block' 
                 event.preventDefault()
             }
         } else {
