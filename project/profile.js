@@ -5,16 +5,6 @@ let arrayOfKeysAndValues = JSON.parse(localStorage.getItem('userInfo'))
 let currentUser = JSON.parse(localStorage.getItem("current-user"));
 
 
-
-
-// currentUser["coachPic"] = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png"
-// localStorage.setItem("current-user", JSON.stringify(currentUser))
-
-// arrayOfKeysAndValues[2]["coachPic"] = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png"
-// localStorage.setItem("userInfo", JSON.stringify(arrayOfKeysAndValues))
-
-
-
 document.getElementById("profile-pic").src = currentUser.coachPic
 document.getElementById("profile-pic").src = currentUser["coachPic"]
 
