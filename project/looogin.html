@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasksssss</title>
+    <style>
+        #forms-container {
+            display:flex ;
+            justify-content: space-between;
+            
+        }
+        body {
+            width: 80%;
+            margin:auto;
+            background-color: rgb(82, 0, 0);
+        }
+        #container, #log-in {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        #log-in {
+            height: 400px;
+        }
+        .content {
+            margin: 25px;
+            font-size: 25px;
+        }
+        #btn, #btn-log {
+            height: 60px;
+            width: 150px;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+        .input-width {
+            width: 300px;
+            height: 30px;
+        }
+
+        .requierd{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+        <form id="log-in" action="./profile.html">
+            <div class="content">
+                <label>Email</label>
+                <br>
+                <input id="login-email" class="input-width" type="email" value="">
+                <div id="login-email-warining" style="display: none; color:red; font-size: 15px;">Your enter wrong email</div>
+                <div id="login-email-accept" style="display: none; color:green; font-size: 15px;">Your email is correct</div>
+            </div>
+            <div class="content">
+                <label>Password</label>
+                <br>
+                <input id="login-password" class="input-width" type="password" value="">
+                <div id="login-password-warining" style="display: none; color:red; font-size: 15px;">Your enter wrong password</div>
+                <div id="login-password-accept" style="display: none; color:green; font-size: 15px;">Your password is correct</div>
+            </div>
+            <br>
+            <button id="btn-log">Log In</button>
+        </form>
+    </div> 
+    <script src="login.js"></script>
+</body>
+</html>
