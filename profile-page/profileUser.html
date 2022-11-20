@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profileUser.css">
+</head>
+<body>
+    <header id="header">
+        <a href=""><img src="../image/logo.png" alt="logo" class="img_logo"></a>
+        <a id="land" class="nav-link HOME" onclick="goToLanding()"><i class="fa-solid fa-house" id="icon_header"></i><span>Home</span></a>
+        <a href="#" class="nav-link User_Page"><i class="fa-solid fa-user" id="icon_header"></i><span>User Page</span></a>
+        <a id="student" class="nav-link STUDENT" onclick="goToStudent()"><i class="fa-solid fa-table" id="icon_header"></i><span>Developer</span></a>      
+        <a id="sendEmail" href="mailto:abdelmajied.abusuliman@gmail.com" class="nav-link Email"><i class="fa-solid fa-envelope" id="icon_header"></i><span>Email</span></a>
+        <div class="icon_facebook_linkedin"> 
+             <a href="#" class="nav-link2 facebook"><i class="fa-brands fa-facebook" id="icon_header"></i></a>
+             <a href="#" class="nav-link2 linkedin"><i class="fa-brands fa-linkedin" id="icon_header"></i></a>
+             <br><br>
+            <p class="nav_paragraf">Copyright ©2022 by Smart System</p>
+        </div>
+    </header>
+    <div class="pageFlex">
+        <div class="leftSide">
+            <div>
+                <img id="profile=pic" class="imgcss" src="./photo/girl.png" alt="user photo">
+                <h2 id="name-of-user">lorem ipsum</h2>
+            </div>
+            <div class="socialMedia">
+                <ul>
+                    <li><a id="twitterIcon" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a id="githubIcon" href="#"><i class="fa-brands fa-github "></i></a></li>
+                    <li><a id="linkedinIcon" href="#"><i class="fa-brands fa-linkedin-in "></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class=rightSide>
+            <div class="info">
+                <h2>Information</h2>
+                <div class="infoFlex">
+                    <div class="data">
+                        <h3>Email</h3>
+                        <p id="email-of-user">Lorem.ipsum@gmail.com</p>
+                    </div>
+                    <div class="data">
+                        <h3>Phone</h3>
+                        <p id="mobile-of-user">+962 1234567</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="bioDiv">
+                <h2 id="bio">Bio :</h2>
+                <div id="coach-bio"></div>
+                    <br>
+                    <br>
+                    <button id="clickToEditBio" onclick="openTxtArea()">Edit Bio</button>
+                    <div id="addTxtBio" style="display: none;">
+                        <textarea id="writeBioHere" value="" placeholder="write something about you . . ."></textarea>
+                        <br>
+                        <button id="clickToUpdate" onclick="editTxtBio()">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    <script src="UserProfile.js"></script>
+</body>
+</html>

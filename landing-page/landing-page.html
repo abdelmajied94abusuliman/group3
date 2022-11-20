@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="landing-page.css">
+
+</head>
+<body>
+    <header id="header">
+        <img src="../image/logo.png" alt="logo" class="img_logo">
+        <a id="homee" class="nav-link HOME"><i class="fa-solid fa-house" id="icon_header"></i><span>Home</span></a>
+        <a id="coach-profile"  class="nav-link User_Page" onclick="goToProfile()"><i class="fa-solid fa-user" id="icon_header"></i><span>User Page</span></a>
+        <a id="student" class="nav-link STUDENT" onclick="goToStudent()"><i class="fa-solid fa-table" id="icon_header"></i><span>Developer</span></a>      
+        <a id="sendEmail" href="mailto:abdelmajied.abusuliman@gmail.com" class="nav-link Email"><i class="fa-solid fa-envelope" id="icon_header"></i><span>Email</span></a>    
+        <div class="icon_facebook_linkedin">
+             <a href="#" class="nav-link2 facebook"><i class="fa-brands fa-facebook" id="icon_header"></i></a>
+             <a href="#" class="nav-link2 linkedin"><i class="fa-brands fa-linkedin" id="icon_header"></i></a>
+             <br><br>
+            <p class="nav_paragraf">Copyright ©2022 by Smart System</p>
+        </div> 
+    </header>
+
+    <section>
+        <div class="container">
+          <div id="head">
+              <div class="content_Welcome">Welcome , <span id="user-name-home"></span></div>
+              <div id="right-head-side">
+                  <p id="email-of-user"></p>
+                  <img id="image-of-user-M" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png">
+                  <img id="image-of-user-A" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png">
+              </div>
+          </div>
+          <div class="left_Side">
+              <p class="content_paragraf">Global News about programming</p>
+              <img src="https://fullscale.io/wp-content/uploads/2022/07/javascript-updates.png" class="img_left_Side"><br><br>
+              <p class="content_paragraf">JavaScript Updates in 2022</p>
+              <p class="content_paragraf1">Many exciting things are happening with the JavaScript updates in 2022 that continue to evolve.<a href="https://fullscale.io/blog/javascript-update/" id="links">Read more</a></p>
+              <hr>
+              <p class="content_paragraf">Global News about programming</p>
+              <img src="https://cdn.columbiauniversitybootcamp.com/wp-content/uploads/sites/108/2021/11/tes_gen_blog_post_071921_1171172626-800x412.jpg" class="img_left_Side"><br><br>
+              <p class="content_paragraf">11 New Programming Languages to Learn in 2022</p>
+              <p class="content_paragraf2">Coding remains one of tech’s most important literacies, impacting countless professional fields in an increasingly digital world.<a href="https://bootcamp.cvn.columbia.edu/blog/new-programming-languages/" id="links">Read more</a></p>
+          </div>
+          <div class="right_Side_1">
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://media-exp1.licdn.com/dms/image/C4E22AQGj-RBN6-BtvA/feedshare-shrink_1280/0/1663790026742?e=1671667200&v=beta&t=aB3YYUex8Oxp6NrUS8IYhg3_PBwnNWkv4CSKLFj8BYc" width="400px" height="400px" class="d-block w-100" alt="teamAcademy">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Our Academy Team</h5>
+                        <p>From last interviews with our new students</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://media-exp1.licdn.com/dms/image/C4D22AQHEbsLRmYCRPA/feedshare-shrink_1280/0/1667670108228?e=1671667200&v=beta&t=Lpdg48GXWPR2Qw8PRSs3E63fI84HKnuYXAV46zJHcbg" width="400px" height="400px" class="d-block w-100" alt="coach mona achievment">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Congratulations to coach Mona</h5>
+                        <p>Coach Mona said : I'm happy to announce I'm officially a facilitator for #IamRemarkable workshops.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../../Screenshot2022119191706.jpg" width="400px" height="400px" class="d-block w-100" alt="our student project">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Portfolio for our student</h5>
+                        <p>Our student had finished their third project.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+          </div>
+          <div class="right_Side_2">
+              <div class="left_right_Side">
+                    <div class="background_icon">
+                      <i class="fa-solid fa-users" id="color_icon_right_Side_2"></i>
+                    </div>
+                  <p class="paragraf_bolder">200</p><br>
+                  <p class="paragraf_normal">STUDENTS TRACKED NOW</p>
+              </div>
+              <div class="right_right_Side">
+                    <div class="background_icon">
+                        <i class="fa-solid fa-star" id="color_icon_right_Side_2"></i>
+                  </div>
+                  <p class="paragraf_bolder">30</p><br>
+                  <p class="paragraf_normal">ATTENDANCE RECORDS LOGGED</p>
+              </div>
+          </div>
+          <div class="right_Side_3">
+              <div class="left_right_Side_3">
+                  <div class="background_icon">
+                      <i class="fa-solid fa-book"id="color_icon_right_Side_2"></i>
+                  </div>
+                  <br><br>
+                  <p class="paragraf_normal">Education</p>
+              </div>
+              <div class="right_right_Side_3">
+
+                  <div class="background_icon">
+                      <i class="fa-solid fa-laptop" id="color_icon_right_Side_2"></i>
+                  </div>
+                  <br><br>
+                  <p class="paragraf_normal">CONSTANTLY IMPROVED</p>
+              </div>
+          </div>
+        </div>   
+    </section>
+    <script src="./landing-page.js"></script>
+</body>
+</html>

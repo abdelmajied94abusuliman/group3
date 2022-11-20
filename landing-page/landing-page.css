@@ -1,0 +1,252 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#header  {
+    background-color:#272D4A;
+    border-bottom:1px black solid ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    font-family: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12,1fr);
+}
+.nav-link{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-left: 50px;
+    margin-top: 25px;
+}
+
+.nav-link2{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    
+}
+
+.img_logo{
+   width:185px ;
+   height: 185px;
+   grid-row: 1/3;
+}
+
+.HOME{
+    grid-row: 3/5;
+    padding-top: 15px;
+}
+
+.User_Page{
+    grid-row: 5/7;
+    padding-top: 5px;
+}
+
+.STUDENT{
+    grid-row: 7/9;
+    padding-top: 5px;
+}
+
+.Email{
+    grid-row: 9/11;
+    padding-top: 5px;
+}
+
+.icon_facebook_linkedin{
+    grid-row: 12/12    ;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#icon_header{
+    padding-right: 20px;
+}
+
+.nav_paragraf{
+    color: white;
+    font-size: 13px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+body{
+    background-color: #E3E9F5;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-rows: repeat(26, 50px);
+    padding-right: 20px;
+}
+
+.content_Welcome{
+    grid-column:3/11 ;
+    grid-row: 2/3;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+#image-of-user-M, #image-of-user-A {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+    right: 10px;
+}
+
+#image-of-user-A {
+    display: none;
+}
+
+#homee:hover{
+    color: white;
+}
+
+#coach-profile, #student, #sendEmail{
+    transition: 0.4s ease;
+}
+#coach-profile:hover, #student:hover, #sendEmail:hover{
+    transform: scale(1.2);
+    color: yellow;
+    cursor: pointer;
+}
+
+#head {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 600px;
+    left: 340px;
+    width: 940px;
+    height: 65px;
+}
+
+.left_Side{
+    grid-column:7/11 ;
+    grid-row: 13/26;
+    background-color: white;
+    padding: 20px 20px;
+    border: 2px solid #272D4A;
+    border-radius: 10px;
+    box-shadow: 5px 10px #272D4A;
+}
+
+.content_paragraf{
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+#right-head-side {
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#email-of-user{
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.img_left_Side{
+    width: 355px;
+    height: 150px;
+   
+}
+
+.carousel-caption{
+    background-color: #272D4A;
+    opacity: 1;
+}
+
+.right_Side_1{
+    grid-column:3/11 ;
+    grid-row: 4/12;
+    background-color: white;
+}
+
+
+.right_Side_2{
+    grid-column:3/6 ;
+    grid-row: 13/18;
+    background-color: white;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding-top: 40px;
+    border: 2px solid #272D4A;
+    border-radius: 10px;
+    box-shadow: 5px 10px #272D4A;
+}
+
+.background_icon{
+    display: inline-block;
+    background-color: #E3E9F5;
+   border-radius: 100%;
+    width: 85px;
+}
+
+#color_icon_right_Side_2{
+    color: #000000;
+    padding: 23px 20px;
+    font-size: 25px;
+}
+
+.left_right_Side{
+    grid-column: 1/2;
+}
+
+
+.right_right_Side{
+    grid-column: 2/3;
+}
+
+.paragraf_bolder{
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.paragraf_normal{
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.right_Side_3{
+    grid-column:3/6 ;
+    grid-row: 21/26;
+    background-color: white;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding-top: 60px;
+    padding-right: 10px;
+    border: 2px solid #272D4A;
+    border-radius: 10px;
+    box-shadow: 5px 10px #272D4A;
+}
+
+
+.left_right_Side_3{
+    grid-column: 1/2;
+}
+
+.right_right_Side_3{
+    grid-column: 2/3;
+}
+
+

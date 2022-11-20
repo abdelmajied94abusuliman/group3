@@ -1,0 +1,103 @@
+body{
+    background-image: url('./image/background.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    width: 80%;
+    margin-top: 0%;
+    height: 100%;
+}
+#logo{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 50px;
+}
+
+#design{
+    width: 100px;
+    height: 70px;
+    margin: 10px 50px;
+}
+#smart{
+    color: #272D4A;
+    padding-left: 90px;
+    padding-top: 70px;
+}
+#bio{
+   text-align: justify;
+    width: 60%; 
+    padding-left: 90px;
+    /* padding-top: 30px; */
+    font-size: 25px;
+}
+#sign{
+    background-color: #272D4A;
+    border-radius: 5px;
+    margin-left: 90px;
+    color: white;
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+#sign:hover {
+    transform: scale(1.2);
+    background-color: #E2EAF5;
+    color: #272D4A;
+}
+#log{
+    border-radius: 5px;
+    color: white;
+    background-color: #272D4A;
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 40px;
+    transition: 0.4s ease;
+}
+#log:hover {
+    transform: scale(1.2);
+    background-color: #E2EAF5;
+    color: #272D4A;
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    background-color: #272D4A;
+    color: white;
+}
+#bioNav{
+    grid-column: 2/9;
+    padding-top: 15px;
+}
+.paragraph_footer{
+    display: inline;
+    font-size: 20px;
+    
+}
+#bioNav2{
+    grid-column: 11/12;
+    padding-top: 15px;
+}
+.bioNav2_style{
+    background-color: white;
+    height: 5px;
+    width: 40px;
+    margin-bottom: 10px;
+}
+.bioNav2_divs{
+    font-size: 16px;
+}
+.img_teacher{
+    position: absolute;
+    right: 0px;
+    top: 12%;
+    width: 50pc;
+    height: 35pc;
+}
