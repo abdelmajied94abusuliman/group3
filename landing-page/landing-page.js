@@ -2,7 +2,7 @@ let arrayOfKeysAndValues = JSON.parse(localStorage.getItem('userInfo'))
 let currentUser = JSON.parse(localStorage.getItem("current-user"));
 
 if(currentUser.email == 'mona.salih@yahoo.com'){
-    document.getElementById("image-of-user-M").src = "https://pps.whatsapp.net/v/t61.24694-24/174570944_302804968719494_5668236056779515453_n.jpg?ccb=11-4&oh=01_AdTRWcuJHJNWTd2a26nWslmv1XTH3e93fpRRorvrebYlCA&oe=63878EB1"   
+    document.getElementById("image-of-user-M").src = "../image/mona.jpg"   
 } else if (currentUser.email == 'Alaa.amayreh2022@yahoo.com') {
     document.getElementById("image-of-user-A").style.display = 'block'
     document.getElementById("image-of-user-M").style.display = 'none'
@@ -17,4 +17,10 @@ function goToProfile(){
 }
 function goToStudent(){
     window.location.href = "../table-page/LastPage.html"
+}
+function logout(){
+    window.location.href = "../index.html"
+}
+function goToHome(){
+    window.location.href = "../landing-page/landing-page.html" 
 }

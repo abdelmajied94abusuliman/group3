@@ -17,7 +17,7 @@ formLogInEvent.onclick = function (event) {
 
 
     for ( i=0 ; i<arrayOfKeysAndValues.length ; i++ ){
-        if (valueFromEmailLog == arrayOfKeysAndValues[i].email){
+        if (valueFromEmailLog.toUpperCase() == arrayOfKeysAndValues[i].email.toUpperCase()){
             document.getElementById("login-email-accept").style.display = 'block';
             document.getElementById("login-email-warining").style.display = 'none' ;
 

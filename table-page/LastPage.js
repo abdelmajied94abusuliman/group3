@@ -94,7 +94,6 @@ callDataFromLocal.forEach( function(element, index) {
 console.log(document.getElementById('select').value);
 
 function setData() {
-
         document.getElementById("tableForNew").style.display = 'none'
     
         callDataFromLocal = JSON.parse(localStorage.getItem('student-data'))
@@ -106,9 +105,10 @@ function setData() {
             document.getElementById("you-can-change-A").style.display = 'none'
             document.getElementById("tableContainer").style.setProperty("display", "none", "important") 
             document.getElementById("tableForNew").style.setProperty("display", "none", "important")
+            showAllStudent()
             return myValue
         }
-
+        document.getElementById("show-all-student").style.visibility = 'visible'
         if ( myValue != 'first-select'){
             if(currentUser.email == 'mona.salih@yahoo.com'){
                 document.getElementById("you-can-change-A").style.display = 'none'
@@ -130,7 +130,7 @@ function setData() {
         html += "<tr>" +  "<td>" + `Number of Task's Solved`    + "</td>" + `<td id='AddSolvedHere' class='center_table1'> ${callDataFromLocal[myValue].solvedTask} <button id='clickToAddSolved' onclick='increaseSolv(${callDataFromLocal[myValue].solvedTask},${myValue})' > + </button> <button id='clickToSubSolved' onclick='decreaseSolv(${callDataFromLocal[myValue].solvedTask},${myValue})'> - </button> </td>` + "</tr>";
         html += "<tr>" +  "<td>" + `Feedback from Coach Mona`   + "</td>" + `<td id='coach-mona-feedback' class='center_table1'> <p id='Mfeedbck'> ${callDataFromLocal[myValue].MFeedback} </p> </td>`  + "</tr>";
         html += "<tr>" +  "<td>" + `Feedback from Coach Alaa`   + "</td>" +  `<td id='coach-alaa-feedback' class='center_table1'> <p id='Afeedbck'> ${callDataFromLocal[myValue].Afeedback} </p> </td>` + "</tr>";
-        html += "<tr>" +  "<td>" + `Delete Student`             + "</td>" +  `<td class='center_table1'> <button id='delete-student' class='trash' ondblclick='clickToRemoveStudent( ${myValue} )'> Remove <i class="fa-regular fa-trash-can"></i> </td> </button> ` + "</tr>"
+        html += "<tr>" +  "<td>" + `Delete Student`             + "</td>" +  `<td class='center_table1'> <button id='delete-student' class='trash' onclick='clickToRemoveStudent( ${myValue} )'> Remove <i class="fa-regular fa-trash-can"></i> </td> </button> ` + "</tr>"
         
         html += "</table>";
         document.getElementById("tableContainer").innerHTML = html;
@@ -200,6 +200,7 @@ function sendAfeedback () {
     document.getElementById("A-give-me-feedback").value = ""
 }
 function addNewStudent() {
+    document.getElementById("show-all-student").style.visibility = 'visible'
     document.getElementById("you-can-change-M").style.display = 'none'
     document.getElementById("you-can-change-A").style.display = 'none'
     document.getElementById("tableForNew").style.display = 'block'
@@ -301,6 +302,10 @@ function clickToRemoveStudent(index){
         }
         localStorage.setItem(`student-data` , JSON.stringify(callDataFromLocal))
     });
+    document.getElementById("you-can-change-A").style.display = 'none'
+    document.getElementById("you-can-change-M").style.display = 'none'
+    showAllStudent()
+    window.reload()
 }
 function goToHome(){
     window.location.href = "../landing-page/landing-page.html"
@@ -337,10 +342,58 @@ function showAllStudent(){
     document.getElementById("tableForNew").style.setProperty("display", "none", "important")
     printAllStudent()
     document.getElementById("tableContainer").style.display = 'block'
+    document.getElementById("show-all-student").style.visibility = 'hidden'
 }
 
 function clearAll(){
     studentData = {}
     window.localStorage.setItem('student-data' , JSON.stringify(studentData))
+    document.getElementById("show-all-student").style.visibility = 'hidden'
     window.location.reload();
+}
+
+
+var fullTable = "<table class='allStudent' style='width:100%'>";
+    fullTable += "<td style='text-align: center;'>" + `ID`                         + "</td>"
+    fullTable += "<td style='text-align: center;'>" + `Developer Name`               + "</td>"
+    fullTable += "<td style='text-align: center;'>" + `Number of absent/Total days`           + "</td>"
+    fullTable += "<td style='text-align: center;'>" + `Number of Total Task`       + "</td>"
+    fullTable += "<td style='text-align: center;'>" + `Number of Task's Solved`    + "</td>"
+    callDataFromLocal.map(function (element){
+        document.getElementById("show-all-student").style.visibility = 'hidden'
+        fullTable += "<tr>";
+        fullTable += "<td style='text-align: center;'>" + element.id +  "</td>";
+        fullTable += "<td style='text-align: center;'>" + element.name +  "</td>";
+        fullTable += "<td style='text-align: center;'>" + element.absent + "/180" + "</td>";
+        fullTable += "<td style='text-align: center;'>" + element.addTask + "</td>";
+        fullTable += "<td style='text-align: center;'>" + element.solvedTask + "</td>";
+        fullTable += "</tr>";
+    })
+fullTable += "</table>";
+document.getElementById("tableContainer").innerHTML = fullTable;
+
+function goToLanding(){
+    window.location.href = "../landing-page/landing-page.html"
+}
+function goToStudent(){
+    window.location.href = "../table-page/LastPage.html"
+}
+
+
+if (currentUser.email == 'Alaa.amayreh2022@yahoo.com'){
+    document.getElementById("image-of-user-A").src = "https://media-exp1.licdn.com/dms/image/C4E03AQFO1f75-n-0Xg/profile-displayphoto-shrink_800_800/0/1656781140615?e=1674086400&v=beta&t=oeJn8JyhW-MtKCxoq6qFg9VPgS5fh1ts2Wi6l_YWGxU"
+    document.getElementById("user-name-home").innerHTML = currentUser.firstName + " " + currentUser.lastName
+    document.getElementById("email-of-user").innerHTML = currentUser.email
+
+} else if (currentUser.email == 'mona.salih@yahoo.com') {
+    document.getElementById("image-of-user-M").src = "https://pps.whatsapp.net/v/t61.24694-24/174570944_302804968719494_5668236056779515453_n.jpg?ccb=11-4&oh=01_AdTRWcuJHJNWTd2a26nWslmv1XTH3e93fpRRorvrebYlCA&oe=63878EB1"
+    document.getElementById("user-name-home").innerHTML = currentUser.firstName + " " + currentUser.lastName
+    document.getElementById("email-of-user").innerHTML = currentUser.email
+
+} else {
+    document.getElementById("user-name-home").innerHTML = currentUser.firstName + " " + currentUser.lastName
+    document.getElementById("email-of-user").innerHTML = currentUser.email
+}
+function logOutNow(){
+    window.location.href = "../index.html"
 }

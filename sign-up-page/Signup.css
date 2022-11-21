@@ -155,6 +155,11 @@ span{
     background-color: white;
     margin-left: 40%;
 }
+#haveAcc{
+    color: #272D4A;
+    grid-column: 3/5;
+    margin-left: 90px;
+}
 @media screen and (min-width:1472px) and (max-width:2560px){
     #forms-container{
     grid-column: 3/6;

@@ -1,21 +1,10 @@
-#header  {
-    background-color:#272D4A;
-    border-bottom:1px black solid ;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 220px;
-    font-family: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12,1fr);
-}
+
 .nav-link{
     color: white;
     font-weight: bolder;
     text-decoration: none;
     padding-left: 50px;
+    transition: 0.7s ease !important;
 }
 
 .nav-link2{
@@ -38,12 +27,12 @@
 
 .User_Page{
     grid-row: 5/7;
-    /* padding-top: 10px; */
+   
 }
 
 .STUDENT{
     grid-row: 7/9;
-    /* padding-top: 10px; */
+  
 }
 
 .Email{
@@ -71,7 +60,7 @@ body{
 }
 .pageFlex{
     margin-left:240px;
-    margin-top: 4%;
+    margin-top: 0%;
     padding:0%;
     color: #494c4c;
     box-sizing: border-box;
@@ -80,7 +69,7 @@ body{
     height:82vh ;
     width:70%;
     display: flex;
-    box-shadow: 0px 5px 10px -3px  #c3cfe9;
+    box-shadow: 0px 5px 10px -3px  #272D4A;
 }
     .leftSide{
         width: 25%;
@@ -171,8 +160,9 @@ ul li a{
     background-color:#272D4A ;
     color: white;
     height: 35px;
-    border-radius: 7px;
+    border-radius: 4px;
     font-size:15px;
+    padding: 4px;
 }
 #land:hover, #student:hover, #sendEmail:hover{
     transform: scale(1.2);
@@ -183,6 +173,273 @@ ul li a{
     background-color:#272D4A ;
     color: white;
     height: 35px;
-    border-radius: 7px;
+    border-radius: 4px;
     font-size:15px;
+    padding: 4px;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#header  {
+    background-color:none;
+    border-bottom:1px black solid ;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    width: 220px;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12,1fr);
+
+}
+
+
+.nav-link{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.nav-link2{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    
+}
+
+.img_logo{
+   width: 110px;
+   height: 73px;
+   grid-row: 2/3;
+   margin-left: 40px;
+}
+
+.HOME{
+    grid-row: 4/5    ;
+    margin-left: 49px;
+}
+
+.User_Page{
+    grid-row: 5/6    ;
+    margin-left: 49px;
+}
+
+.STUDENT{
+    grid-row: 6/7    ;
+    margin-left: 49px;
+}
+
+.Email{
+    grid-row: 7/8    ;
+    margin-left: 49px;
+}
+
+.icon_facebook_linkedin{
+    grid-row: 11/12    ;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+#icon_header{
+    padding-right: 20px;
+}
+
+.nav_paragraf{
+    color: white;
+    font-size: 13px;
+}
+
+.offcanvas-start{
+    width: 250px !important;
+    background-color: #272D4A !important;
+}
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+
+  /* ------------------------------------------------------------------------------------- */
+
+  .navbar-toggler{
+    position: absolute;
+    left: 1%;
+    top: 10px;
+  }
+
+  .bg-dark{
+      background-color: #272D4A !important;
+  }
+  .nav.navbar.navbar-dark.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: red!important;
+    
+}
+
+.navbar-dark{
+        position: fixed !important;
+    z-index:999 ;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+
+.Logout{
+    background-color: #272D4A;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    transition: 0.7s ease !important;
+    
+}
+
+.Logout:hover{
+    color: #F1D3B3 !important;
+    transform: scale(1.2) !important;
+}
+
+.icon_Logout{
+    background-color: none;
+    margin-left: 10px;
+}
+  
+
+/* ----------------------------------------------- */
+#image-of-user-M, #image-of-user-A {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+    right: 10px;
+}
+
+#image-of-user-A {
+    display: none;
+}
+
+#head {
+    background-color:none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    height: 48px;
+    grid-column: 5/10;
+    margin-left: 90px;
+
+}
+
+
+#email-of-user{
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.content_Welcome{
+    padding-top: 10px;
+}
+
+#right-head-side {
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.img_logo{
+    width: 110px;
+    height: 73px;
+    grid-row: 2/3;
+    margin-left: 40px;
+ }
+ 
+ #navProject{
+    background-color: #272D4A !important;
+}
+
+.navbar, .navbar-dark, .bg-dark, .navbar-toggler, .offcanvas, .offcanvas-start, .text-bg-dark, .offcanvas-header, .offcanvas-title, .navbar-toggler-icon, #offcanvasNavbarDark, #offcanvasNavbarDarkLabel{
+  background-color: #272D4A !important;
+}
+
+/* ---------------------------------------------------------------- */
+
+.nav-link:hover{
+    color: #F1D3B3 !important;
+    transform: scale(1.2) !important;
+}
+.link_icon{
+    transition: 0.7s ease !important;
+}
+
+.link_icon:hover{
+    color: #F1D3B3 !important;
+    transform: scale(1.2) !important;
 }

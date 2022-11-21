@@ -4,24 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Last Page</title>
+    <link rel="icon" href="../image/logo-home.png">
+    <title>Smart System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="LastPage.css">
+
+    <script src="https://kit.fontawesome.com/b56885f075.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
 </head>
-<body>
-    <header id="header">
-        <img src="../image/logo.png" alt="logo" class="img_logo">
-        <a id="homee" class="nav-link HOME" onclick="goToHome()"><i class="fa-solid fa-house" id="icon_header"></i><span>Home</span></a>
-        <a id="coach-profile" class="nav-link User_Page" onclick="goToProfile()"><i class="fa-solid fa-user" id="icon_header"></i><span>User Page</span></a>
-        <a id="student" class="nav-link STUDENT"><i class="fa-solid fa-table" id="icon_header"></i><span>Developer</span></a>      
-        <a id="sendEmail" href="mailto:abdelmajied.abusuliman@gmail.com" class="nav-link Email"><i class="fa-solid fa-envelope" id="icon_header"></i><span>Email</span></a>
-        <div class="icon_facebook_linkedin">
-             <a href="#" class="nav-link2 facebook"><i class="fa-brands fa-facebook" id="icon_header"></i></a>
-             <a href="#" class="nav-link2 linkedin"><i class="fa-brands fa-linkedin" id="icon_header"></i></a>
-             <br><br>
-            <p class="nav_paragraf">Copyright ©2022 by Smart System</p>
-        </div> 
-    </header>
+<body style="background-color: #E3E9F5;">
+    
+    
+<div>
+    <nav class="navbar navbar-dark bg-dark" id="navProject"  aria-label="Dark offcanvas navbar">
+         <div class="container-fluid">
+           
+           
+           
+             <div id="head">
+                 <div class="content_Welcome">Welcome , <span id="user-name-home"></span></div>
+                 <div id="right-head-side">
+                     <p id="email-of-user"></p>
+                     <img id="image-of-user-M" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png">
+                     <img id="image-of-user-A" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png">
+                 </div>
+             </div>
+        
+     
+ 
+           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+             <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel"><img src="../image/logo2.png" alt="logo" class="img_logo" onclick="goToHome()"></h5>
+               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+             </div>
+             
+        <!-- ======= Header ======= -->
+             <header id="header">
+                 <a href="../index.html"  class="nav-link HOME"><i class="fa-solid fa-house" id="icon_header"></i><span>Home</span></a>
+                 <a href="../profile-page/profileUser.html" class="nav-link User_Page"><i class="fa-solid fa-user" id="icon_header"></i><span>User Page</span></a>
+                 <a id="student" class="nav-link STUDENT"><i class="fa-solid fa-table" id="icon_header"></i><span>Developer</span></a>      
+                 <a href="mailto:abdelmajied.abusuliman@gmail.com" class="nav-link Email"><i class="fa-solid fa-envelope" id="icon_header"></i><span>Email</span></a>    
+                 
+                 <div class="icon_facebook_linkedin">
+                     
+                 <button class="Logout" onclick="logOutNow()">Logout<i class="fa-solid fa-right-from-bracket icon_Logout" id="icon_header"></i></button>
+                 
+                 <br><br>
+ 
+                 <p class="nav_paragraf">Copyright ©2022 by Smart System</p>
+                 </div> 
+                     
+             </header>
+ 
+             </div>
+           </div>
+         </div>
+       </nav> 
+ </div>
+     
+ <div style="height: 50px;">
+
+ </div>
+
     <select id="select" value="" onchange="setData()">
         <option value="first-select" selected>Select Developer</option>
         <option id="1" value="0" class="student">ID 1 : Abdelmajied Akram</option>
@@ -30,8 +81,8 @@
         <option id="4" value="3" class="student">ID 4 : Amroo Al-Wageei</option>
     </select>
     <button id="add-student" onclick="addNewStudent()">Add New Developer</button>
-    <button id="show-all-student" onclick="showAllStudent()">Show All Developer</button>
     <button id="clearAllDeveloperData" onclick="clearAll()">Clear All Developer Data</button>
+    <button id="show-all-student" onclick="showAllStudent()">Show All Developer</button>
     <br>
     <br>
     <div id="tableForNew"></div>
